@@ -1,4 +1,5 @@
 ﻿using Core.Interfaces;
+using Core.Models;
 using Core.Services;
 using System;
 using System.Collections.Generic;
@@ -9,23 +10,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Presenters;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IMainFormView
     {
-        private readonly IPersonService personService;
-        public Form1()
+
+        private Form1Presenter presenter;
+        public Form1(PersonManager personManager)
         {
             InitializeComponent();
-
-            personService = new PersonService();
-
-            personBindingSource.DataSource = personService.GetPeople(10);
-
+            presenter = new Form1Presenter(this, personManager);
         }
 
-        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        public event DataGridViewBindingCompleteEventHandler dataGridView_DataBindingComplete
+        {
+            add { dataGridView1.DataBindingComplete += value; }
+            remove { dataGridView1.DataBindingComplete -= value; }
+        }
+
+        public event DataGridViewCellEventHandler dataGridView_CellLeave
+        {
+            add { dataGridView1.CellLeave += value; }
+            remove { dataGridView1.CellLeave -= value; }
+        }
+
+        public void SetDataGridViewBackColor()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -33,9 +44,14 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void dataGridView1_CellLeave(object sender, DataGridViewCellEventArgs e)
+        public void SetDataGridViewRowBackColor(Int32 rowIndex)
         {
-            dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+            dataGridView1.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Red;
+        }
+
+        public void SetDataSource(IEnumerable<Person> people)
+        {
+            personBindingSource.DataSource = people;
         }
     }
 }

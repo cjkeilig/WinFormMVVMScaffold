@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Models", "Core.Models\Core.Models.csproj", "{DC39D0E1-2D5B-4BAC-892D-C654C000D731}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Services", "Core.Services\Core.Services\Core.Services.csproj", "{64DC2498-1769-4E6F-8C47-A7ECD08D9B47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Managers", "Core.Services\Core.Services\Core.Managers.csproj", "{64DC2498-1769-4E6F-8C47-A7ECD08D9B47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Interfaces", "Core.Interfaces\Core.Interfaces.csproj", "{C4BAF15F-4103-47C0-B056-D67B041ECA0F}"
 EndProject

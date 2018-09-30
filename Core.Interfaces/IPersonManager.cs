@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Core.Interfaces
 {
-    public interface IPersonService
+    public interface IPersonManager
     {
-        IEnumerable<Person> GetPeople(Int32 howMany);
+        IEnumerable<Person> GetPeople();
     }
 }

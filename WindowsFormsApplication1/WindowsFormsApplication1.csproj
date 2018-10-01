@@ -115,13 +115,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core.Services\Core.Services\Core.Managers.csproj">
-      <Project>{64dc2498-1769-4e6f-8c47-a7ecd08d9b47}</Project>
-      <Name>Core.Managers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
       <Project>{c4baf15f-4103-47c0-b056-d67b041eca0f}</Project>
       <Name>Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Managers\Core.Managers.csproj">
+      <Project>{64dc2498-1769-4e6f-8c47-a7ecd08d9b47}</Project>
+      <Name>Core.Managers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core.Models\Core.Models.csproj">
       <Project>{dc39d0e1-2d5b-4bac-892d-c654c000d731}</Project>

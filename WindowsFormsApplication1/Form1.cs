@@ -1,6 +1,6 @@
 ﻿using Core.Interfaces;
 using Core.Models;
-using Core.Services;
+using Core.Managers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
     {
 
         private Form1Presenter presenter;
-        public Form1(PersonManager personManager)
+        public Form1(IPersonManager personManager)
         {
             InitializeComponent();
             presenter = new Form1Presenter(this, personManager);

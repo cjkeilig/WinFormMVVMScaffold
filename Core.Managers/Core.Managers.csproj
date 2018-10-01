@@ -7,8 +7,8 @@
     <ProjectGuid>{64DC2498-1769-4E6F-8C47-A7ECD08D9B47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core.Services</RootNamespace>
-    <AssemblyName>Core.Services</AssemblyName>
+    <RootNamespace>Core.Managers</RootNamespace>
+    <AssemblyName>Core.Managers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,11 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core.Interfaces\Core.Interfaces.csproj">
+    <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
       <Project>{c4baf15f-4103-47c0-b056-d67b041eca0f}</Project>
       <Name>Core.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core.Models\Core.Models.csproj">
+    <ProjectReference Include="..\Core.Models\Core.Models.csproj">
       <Project>{dc39d0e1-2d5b-4bac-892d-c654c000d731}</Project>
       <Name>Core.Models</Name>
     </ProjectReference>

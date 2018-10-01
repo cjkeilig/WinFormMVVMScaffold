@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Core.Models;
 using System.Drawing;
 
-namespace Core.Services
+namespace Core.Managers
 {
     public class PersonManager : IPersonManager
     {

@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
             get
             {
                 // Return the type of the editing control that CalendarCell uses.
-                return typeof(TextBox);
+                return typeof(DateEditor);
             }
         }
 

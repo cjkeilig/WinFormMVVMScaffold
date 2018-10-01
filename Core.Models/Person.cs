@@ -16,12 +16,15 @@ namespace Core.Models
 
         public Color Color { get; set; }
 
-        public Person(Int32 Id, String Name, Int32 Age, Color c)
+        public DateTime Birthday { get; set; }
+
+        public Person(Int32 Id, String Name, Int32 Age, Color c, DateTime Birthday)
         {
             this.Id = Id;
             this.Name = Name;
             this.Age = Age;
             this.Color = c;
+            this.Birthday = Birthday;
         }
     }
 }

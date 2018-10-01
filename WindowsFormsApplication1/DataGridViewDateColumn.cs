@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
 {
     public class DataGridViewDateColumn : DataGridViewColumn
     {
-        public DataGridViewDateColumn()
+        public DataGridViewDateColumn() : base(new DataGridViewDateCell())
         {
         }
 

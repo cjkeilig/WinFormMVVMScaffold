@@ -32,13 +32,13 @@ namespace WindowsFormsApplication1
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDateColumn1 = new WindowsFormsApplication1.DataGridViewDateColumn();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new WindowsFormsApplication1.DataGridViewDateColumn();
-            this.Column1.CellTemplate = new DataGridViewDateCell();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday = new WindowsFormsApplication1.DataGridViewDateColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,15 +50,21 @@ namespace WindowsFormsApplication1
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.Column1,
             this.nameDataGridViewTextBoxColumn,
             this.ageDataGridViewTextBoxColumn,
-            this.colorDataGridViewTextBoxColumn});
+            this.colorDataGridViewTextBoxColumn,
+            this.Birthday});
             this.dataGridView1.DataSource = this.personBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(440, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(635, 384);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridViewDateColumn1
+            // 
+            this.dataGridViewDateColumn1.HeaderText = "Column1";
+            this.dataGridViewDateColumn1.Name = "dataGridViewDateColumn1";
             // 
             // personBindingSource
             // 
@@ -69,11 +75,6 @@ namespace WindowsFormsApplication1
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -92,6 +93,12 @@ namespace WindowsFormsApplication1
             this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
             this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
             this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            // 
+            // Birthday
+            // 
+            this.Birthday.DataPropertyName = "Birthday";
+            this.Birthday.HeaderText = "Birthday";
+            this.Birthday.Name = "Birthday";
             // 
             // Form1
             // 
@@ -112,10 +119,11 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource personBindingSource;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewDateColumn Column1;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private DataGridViewDateColumn Birthday;
+        private DataGridViewDateColumn dataGridViewDateColumn1;
     }
 }
 

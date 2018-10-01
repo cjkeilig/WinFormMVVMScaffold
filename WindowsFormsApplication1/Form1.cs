@@ -40,13 +40,13 @@ namespace WindowsFormsApplication1
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                row.DefaultCellStyle.BackColor = (Color)row.Cells[4].Value;
+                //row.DefaultCellStyle.BackColor = (Color)row.Cells[4].Value;
             }
         }
 
         public void SetDataGridViewRowBackColor(Int32 rowIndex)
         {
-            dataGridView1.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Red;
+            //dataGridView1.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Red;
         }
 
         public void SetDataSource(IEnumerable<Person> people)

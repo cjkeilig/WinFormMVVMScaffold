@@ -13,18 +13,18 @@ namespace WindowsFormsApplication1.Presenters
     {
         
         private readonly IMainFormView mainFormView;
-        private readonly IPersonRepository personManager;
+        private readonly IPersonRepository personRepository;
 
         public Form1Presenter(IMainFormView mainFormView, 
-                              IPersonRepository personManager)
+                              IPersonRepository personRepository)
         {
             this.mainFormView = mainFormView;
-            this.personManager = personManager;
+            this.personRepository = personRepository;
 
             mainFormView.dataGridView_DataBindingComplete += dataGridView_DataBindingComplete;
             mainFormView.dataGridView_CellLeave += dataGridView_CellLeave;
 
-            mainFormView.SetDataSource(personManager.GetPeople());
+            mainFormView.SetDataSource(this.personRepository.GetPeople());
 
         }
 

@@ -46,12 +46,20 @@ namespace WindowsFormsApplication1
 
         public void SetDataGridViewRowBackColor(Int32 rowIndex)
         {
-            //dataGridView1.Rows[rowIndex].DefaultCellStyle.BackColor = Color.Red;
+            dataGridView1.Rows[rowIndex].DefaultCellStyle.BackColor = (dataGridView1.Rows[rowIndex].DataBoundItem as Person).Color;
+            //DataGridViewRow row = null;
+            //row.Data
         }
 
         public void SetDataSource(IEnumerable<Person> people)
         {
             personBindingSource.DataSource = people;
+        }
+
+        private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            //e.InheritedRowStyle.BackColor = Color.Red;
+            e.
         }
     }
 }

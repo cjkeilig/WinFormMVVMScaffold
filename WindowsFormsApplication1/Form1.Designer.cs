@@ -32,13 +32,13 @@ namespace WindowsFormsApplication1
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewDateColumn1 = new WindowsFormsApplication1.DataGridViewDateColumn();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new WindowsFormsApplication1.DataGridViewDateColumn();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewDateColumn1 = new WindowsFormsApplication1.DataGridViewDateColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,19 +56,12 @@ namespace WindowsFormsApplication1
             this.Birthday});
             this.dataGridView1.DataSource = this.personBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(635, 384);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridViewDateColumn1
-            // 
-            this.dataGridViewDateColumn1.HeaderText = "Column1";
-            this.dataGridViewDateColumn1.Name = "dataGridViewDateColumn1";
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataSource = typeof(Core.Models.Person);
+            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -99,6 +92,15 @@ namespace WindowsFormsApplication1
             this.Birthday.DataPropertyName = "Birthday";
             this.Birthday.HeaderText = "Birthday";
             this.Birthday.Name = "Birthday";
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(Core.Models.Person);
+            // 
+            // dataGridViewDateColumn1
+            // 
+            this.dataGridViewDateColumn1.HeaderText = "Column1";
+            this.dataGridViewDateColumn1.Name = "dataGridViewDateColumn1";
             // 
             // Form1
             // 

@@ -15,7 +15,7 @@ namespace Core.Repositories
 
         public PersonManager()
         {
-            LoadPeople(10);
+            LoadPeople(1000);
         }
         private void LoadPeople(int howMany)
         {
@@ -23,7 +23,7 @@ namespace Core.Repositories
 
             for (int x = 0; x < howMany; x++)
             {
-                people.Add(new Person(x, "Name " + x, 2 * x, Color.FromArgb(x + 10, x * 10 + 10, x * 10 + 100), DateTime.Today));
+                people.Add(new Person(x, "Name " + x, 2 * x, Color.FromArgb(200,100,200), DateTime.Today));
             }
 
         }

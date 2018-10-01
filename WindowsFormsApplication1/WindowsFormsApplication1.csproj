@@ -78,9 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGridViewDateCell.cs" />
-    <Compile Include="DataGridViewDateColumn.cs" />
-    <Compile Include="DateEditor.cs">
+    <Compile Include="Controls\DataGridViewDateCell.cs" />
+    <Compile Include="Controls\DataGridViewDateColumn.cs" />
+    <Compile Include="Controls\DateEditor.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.cs">

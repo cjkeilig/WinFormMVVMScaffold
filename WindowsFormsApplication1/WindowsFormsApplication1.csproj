@@ -78,6 +78,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGridViewDateCell.cs" />
+    <Compile Include="DataGridViewDateColumn.cs" />
+    <Compile Include="DateEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +124,9 @@
       <Project>{c4baf15f-4103-47c0-b056-d67b041eca0f}</Project>
       <Name>Core.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core.Managers\Core.Managers.csproj">
+    <ProjectReference Include="..\Core.Managers\Core.Repositories.csproj">
       <Project>{64dc2498-1769-4e6f-8c47-a7ecd08d9b47}</Project>
-      <Name>Core.Managers</Name>
+      <Name>Core.Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core.Models\Core.Models.csproj">
       <Project>{dc39d0e1-2d5b-4bac-892d-c654c000d731}</Project>

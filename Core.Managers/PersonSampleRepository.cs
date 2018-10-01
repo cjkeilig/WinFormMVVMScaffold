@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Core.Models;
 using System.Drawing;
 
-namespace Core.Managers
+namespace Core.Repositories
 {
-    public class PersonManager : IPersonManager
+    public class PersonManager : IPersonRepository
     {
         private List<Person> people;
 

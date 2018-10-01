@@ -1,5 +1,5 @@
 ﻿using Core.Interfaces;
-using Core.Managers;
+using Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
         public static IUnityContainer BuildContainer()
         {
             var currentContainer = new UnityContainer();
-            currentContainer.RegisterType<IPersonManager, PersonManager>();
+            currentContainer.RegisterType<IPersonRepository, PersonManager>();
             currentContainer.RegisterType<IMainFormView, Form1>();
             // note: registering types could be moved off to app config if you want as well
             return currentContainer;

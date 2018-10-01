@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Interfaces
 {
-    public interface IPersonManager
+    public interface IPersonRepository
     {
         IEnumerable<Person> GetPeople();
     }

@@ -13,10 +13,10 @@ namespace WindowsFormsApplication1.Presenters
     {
         
         private readonly IMainFormView mainFormView;
-        private readonly IPersonManager personManager;
+        private readonly IPersonRepository personManager;
 
         public Form1Presenter(IMainFormView mainFormView, 
-                              IPersonManager personManager)
+                              IPersonRepository personManager)
         {
             this.mainFormView = mainFormView;
             this.personManager = personManager;

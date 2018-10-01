@@ -1,6 +1,6 @@
 ﻿using Core.Interfaces;
 using Core.Models;
-using Core.Managers;
+using Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
     {
 
         private Form1Presenter presenter;
-        public Form1(IPersonManager personManager)
+        public Form1(IPersonRepository personManager)
         {
             InitializeComponent();
             presenter = new Form1Presenter(this, personManager);
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                row.DefaultCellStyle.BackColor = (Color)row.Cells[3].Value;
+                row.DefaultCellStyle.BackColor = (Color)row.Cells[4].Value;
             }
         }
 

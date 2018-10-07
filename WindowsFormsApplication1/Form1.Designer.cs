@@ -61,7 +61,6 @@ namespace WindowsFormsApplication1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(635, 384);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             // 
             // idDataGridViewTextBoxColumn
             // 

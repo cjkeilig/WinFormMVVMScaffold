@@ -15,7 +15,7 @@ namespace Core.Repositories
 
         public PersonManager()
         {
-            LoadPeople(1000);
+            LoadPeople(20);
         }
         private void LoadPeople(int howMany)
         {

@@ -23,7 +23,7 @@ namespace UnitTestProject1
         public class WinAppTest : WinAppSession
         {
             [TestMethod]
-            public void GridEnterText()
+            public void GridEnterTextTest()
             {
                 // Type mixed text and apply shift modifier to 7890_ to generate corresponding symbols
                 Thread.Sleep(TimeSpan.FromSeconds(2));
@@ -35,7 +35,7 @@ namespace UnitTestProject1
             }
 
             [TestMethod]
-            public void DataGridKeyBoardShortcuts()
+            public void DataGridKeyBoardShortcutsTest()
             {
                 // Type a known text sequence, select, copy, and paste it three times
                 AppiumWebElement firstIdCell = dataGrid.FindElementByName("Row 0").FindElementByName("Id Row 0");
@@ -45,6 +45,14 @@ namespace UnitTestProject1
                 firstIdCell.SendKeys(Keys.Control + "vvv" + Keys.Control); // Paste 3 times using Ctrl + V keyboard shortcut
                 firstIdCell.SendKeys(Keys.Enter);
                 Assert.AreEqual("789789789", firstIdCell.Text);
+            }
+
+            [TestMethod]
+            public void DataGridHasDataTest()
+            {
+                var elements = dataGrid.FindElementsByXPath("//*");     ////@Name=\"Row 0\"[starts-with(Name, 'Name')]");
+                Assert.IsNotNull(elements);
+                
             }
 
             [ClassInitialize]

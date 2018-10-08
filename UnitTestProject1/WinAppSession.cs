@@ -39,7 +39,7 @@ namespace UnitTestProject1
                 session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1.5);
 
                 // Keep track of the data grid view to be used throughout the session
-                dataGrid = session.FindElementByClassName("WindowsForms10.Window.8.app.0.3551b1b_r11_ad1");
+                dataGrid = session.FindElementByAccessibilityId("dataGridView1");
                 Assert.IsNotNull(dataGrid);
             }
         }

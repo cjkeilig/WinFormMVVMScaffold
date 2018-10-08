@@ -50,7 +50,7 @@ namespace UnitTestProject1
             [TestMethod]
             public void DataGridHasDataTest()
             {
-                var elements = dataGrid.FindElementsByXPath("//*");     ////@Name=\"Row 0\"[starts-with(Name, 'Name')]");
+                var elements = dataGrid.FindElementsByXPath("//*/*[starts-with(@Name,'\"Name')]");    // "//*[@Name=\"Row 0\"]"" ////@Name=\"Row 0\"[starts-with(Name, 'Name')]");
                 Assert.IsNotNull(elements);
                 
             }
